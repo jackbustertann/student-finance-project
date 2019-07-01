@@ -85,6 +85,7 @@ layout = go.Layout({'title': 'Total amount paid to student finance for different
 figure=go.Figure(data=[zero_interest, one_interest, two_interest, three_interest],layout=layout)
 plt.offline.iplot(figure)
 ```
+![](plot_1.png)
 
 Plot to show how changing the starting salary effects the total amount paid to student finance after 30 years
 
@@ -103,4 +104,4 @@ layout_2 = go.Layout({'title': 'Total amount paid to student finance for differe
 figure_2=go.Figure(data=[twenty_five_start, thirty_start, thirty_five_start, fourty_start],layout=layout_2)
 plt.offline.iplot(figure_2)
 ```
-
+![](plot_2.png)
