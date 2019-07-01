@@ -21,7 +21,7 @@ def student_finance(initial_salary, pay_rise, percentage_of_salary, initial_loan
     return(years)
 ```
 
-```
+```python
 import plotly as plt
 import plotly.graph_objs as go
 plt.offline.init_notebook_mode(connected = True)
@@ -41,7 +41,7 @@ figure=go.Figure(data=[trace_zero, trace_one, trace_two, trace_three],layout=lay
 plt.offline.iplot(figure)
 ```
 
-```
+```python
 import plotly as plt
 import plotly.graph_objs as go
 plt.offline.init_notebook_mode(connected = True)
