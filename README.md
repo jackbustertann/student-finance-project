@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## Student finance project
 
-You can use the [editor on GitHub](https://github.com/jackbustertann/student-finance-project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```python
+def student_finance(initial_salary, pay_rise, percentage_of_salary, initial_loan, interest_rate, number_of_years):
+    years = [{'year': 0, 'salary': 0, 'salary paid': 0, 'total paid': 0, 'loan remaining': initial_loan}]
+    salary = initial_salary
+    salary_paid = salary * (percentage_of_salary / 100)
+    total_paid = salary_paid
+    loan_remaining = (initial_loan - salary_paid) * (1 + (interest_rate / 100))
+    for i in range(number_of_years):
+        years.append({'year': i + 1, 'salary': int(salary), 'salary paid': int(salary_paid), 'total paid': int(total_paid), 'loan remaining': int(loan_remaining)})
+        salary = salary * (1 + (pay_rise / 100))
+        salary_paid = (salary * (percentage_of_salary / 100))
+        loan_remaining = (loan_remaining - salary_paid) * (1 + (interest_rate / 100))
+        if loan_remaining <= 0:
+            salary_paid = 0
+            loan_remaining = 0
+            total_paid = total_paid
+        else:
+            total_paid = total_paid + (salary * (percentage_of_salary / 100))      
+    return(years)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jackbustertann/student-finance-project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
