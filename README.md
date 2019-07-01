@@ -81,10 +81,11 @@ zero_interest = go.Line({'x': years, 'y': amount_paid_total(25000, 0, 30, 9, 380
 one_interest = go.Line({'x': years, 'y': amount_paid_total(25000, 1, 30, 9, 38000, 6), 'mode': 'lines', 'name': '1% pay rise'})
 two_interest = go.Line({'x': years, 'y': amount_paid_total(25000, 2, 30, 9, 38000, 6), 'mode': 'lines', 'name': '2% pay rise'})
 three_interest = go.Line({'x': years, 'y': amount_paid_total(25000, 3, 30, 9, 38000, 6), 'mode': 'lines', 'name': '3% pay rise'})
-layout = go.Layout({'title': 'Total amount paid to student finance for different inflation rates, assuming a starting salary of 25k', 'xaxis': {'title':'year'}, 'yaxis': {'title':'total amount paid'}})                           
+layout = go.Layout({'title': 'Total amount paid to student finance for different inflation rates', 'xaxis': {'title':'year'}, 'yaxis': {'title':'total amount paid'}})                           
 figure=go.Figure(data=[zero_interest, one_interest, two_interest, three_interest],layout=layout)
 plt.offline.iplot(figure)
 ```
+
 Plot to show how changing the starting salary effects the total amount paid to student finance after 30 years
 
 ```python
@@ -98,7 +99,7 @@ twenty_five_start = go.Line({'x': years, 'y': amount_paid_total(25000, 2, 30, 9,
 thirty_start = go.Line({'x': years, 'y': amount_paid_total(30000, 2, 30, 9, 38000, 6), 'mode': 'lines', 'name': '30k'})
 thirty_five_start = go.Line({'x': years, 'y': amount_paid_total(35000, 2, 30, 9, 38000, 6), 'mode': 'lines', 'name': '35k'})
 fourty_start = go.Line({'x': years, 'y': amount_paid_total(40000, 2, 30, 9, 38000, 6), 'mode': 'lines', 'name': '40k'})
-layout_2 = go.Layout({'title': 'Total amount paid to student finance for different starting salaries, assuming a fixed inflation rate of 2%', 'xaxis': {'title':'year'}, 'yaxis': {'title':'total amount paid'}})                           
+layout_2 = go.Layout({'title': 'Total amount paid to student finance for different starting salaries', 'xaxis': {'title':'year'}, 'yaxis': {'title':'total amount paid'}})                           
 figure_2=go.Figure(data=[twenty_five_start, thirty_start, thirty_five_start, fourty_start],layout=layout_2)
 plt.offline.iplot(figure_2)
 ```
