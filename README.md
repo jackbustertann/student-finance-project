@@ -1,6 +1,6 @@
-## Student finance project
+# Student finance project
 
-Calculating salary earned for each year, assuming a fixed inflation rate
+## Calculating salary earned for each year, assuming a fixed inflation rate
 
 ```python
 salary(initial_salary, inflation, years)
@@ -11,7 +11,7 @@ def salary(initial_salary, inflation, years):
     return(salary)
  ```
  
-Calculating the individual amount paid towards loan for each year
+## Calculating the individual amount paid towards loan for each year
 
 ```python
 def amount_paid_individual(initial_salary, inflation, years, percent_paid):
@@ -21,7 +21,7 @@ def amount_paid_individual(initial_salary, inflation, years, percent_paid):
     return(amount)
  ```
  
-Calculating the remaining loan for each year, assuming a fixed interest rate
+## Calculating the remaining loan for each year, assuming a fixed interest rate
 
 ```python
 def remaining_loan(initial_salary, inflation, years, percent_paid, initial_loan, interest):
@@ -36,7 +36,7 @@ def remaining_loan(initial_salary, inflation, years, percent_paid, initial_loan,
     return(amount_left)
 ```
 
-Calculating the total amount paid towards loan for each year
+## Calculating the total amount paid towards loan for each year
 
 ```python
 def amount_paid_total(initial_salary, inflation, years, percent_paid, initial_loan, interest):
@@ -54,7 +54,7 @@ def amount_paid_total(initial_salary, inflation, years, percent_paid, initial_lo
     return(total_amount)
 ```
 
-Creating a dictionary containing all the values calculated for each year
+## Creating a dictionary containing all the values calculated for each year
 
 ```python
 def dictionary(initial_salary, inflation, years, percent_paid, initial_loan, interest):
@@ -68,7 +68,7 @@ def dictionary(initial_salary, inflation, years, percent_paid, initial_loan, int
     return(years_list)
 ```
 
-Plot to show how changing the inflation rate effects the total amount paid to student finance after 30 years
+## Plot to show how changing the inflation rate effects the total amount paid to student finance after 30 years
 
 ```python
 import plotly as plt
@@ -87,7 +87,7 @@ plt.offline.iplot(figure)
 ```
 ![](plot_1.png)
 
-Plot to show how changing the starting salary effects the total amount paid to student finance after 30 years
+## Plot to show how changing the starting salary effects the total amount paid to student finance after 30 years
 
 ```python
 import plotly as plt
